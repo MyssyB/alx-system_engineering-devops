@@ -1,1 +1,1 @@
-This is a readme file for variables expansions.
+This is a readme file for shell aliases, variables and expansions
