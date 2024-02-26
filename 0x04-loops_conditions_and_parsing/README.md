@@ -1,2 +1,1 @@
-0x04. Loops, conditions and parsing
-devops shell bash scripting
+0X04. LOOPS, CONDITIONS AND PARSING
