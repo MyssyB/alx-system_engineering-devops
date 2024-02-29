@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#displays listening ports that shos listening sockets and PID and name of the program
+
+sudo lsof -i -P -n | grep LISTEN
