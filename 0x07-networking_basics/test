@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+echo "I love sleeping: $1"
+echo "I love eatting: $2"
+echo "stop: $@"
