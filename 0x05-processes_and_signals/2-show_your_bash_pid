@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# bash script that displays lines containing the bash word
+# shellcheck disable=SC2009
+
+bash_display=$(ps aux | grep bash | grep -v grep)
+
+echo "USER      PID %CPU %MEM   VSZ     RSS TTY STAT START      TIME COMMAND"
+
+while IFS= read -r line; do
+	echo "$line"
+done <<< "$bash_display"
+
