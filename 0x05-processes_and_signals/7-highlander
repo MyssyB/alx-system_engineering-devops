@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# This script displays to infinity and beyond and i am invincible
+
+trap 'echo "I am invincible!!!"' SIGTERM
+
+
+count=1
+
+while [ "$count" -eq 1 ]; do
+	echo To infinity and beyond
+	sleep 2
+done
