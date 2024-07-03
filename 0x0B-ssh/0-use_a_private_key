@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 SERVER_ADDRESS="100.25.143.129"
 
