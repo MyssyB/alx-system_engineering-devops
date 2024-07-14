@@ -1,7 +1,4 @@
 #!/usr/bin/env bash
 # configuration file 
 
-nano ~/.ssh/config
-Host 100.25.143.129
-	IdentifyFile ~/.ssh/school
-	PasswordAuthentication no
+ssh -i ~/.ssh/school ubuntu@54.197.80.17
