@@ -1,11 +1,5 @@
 #!/usr/bin/env bash
-#debugging
-
-ln -sf /etc/nginx/sites-available/default /etc/enginx/sites-enabled/
-service nginx restart
-pkill -f "nginx"#!/usr/bin/env bash
-#debugging
-
+# debugging
 ln -sf /etc/nginx/sites-available/default /etc/enginx/sites-enabled/
 service nginx restart
 pkill -f "nginx"
