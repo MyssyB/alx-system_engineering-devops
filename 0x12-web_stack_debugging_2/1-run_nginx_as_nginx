@@ -13,8 +13,7 @@ NGINX_CONF="/etc/nginx/nginx.conf"
 sed -i 's/usr www-data;/usr nginx;/' $NGINX_CONF
 
 sed -i 's/listen 80 default_server;/listen 8080 default_Server;/' /etc/nginx/sites-available/default
-sed -i 's/listen \[::\]:80 default_server;/listen \[::\]:8080 default_server;/'
-/etc/nginx/sites-available/default
+sed -i 's/listen \[::\]:80 default_server;/listen \[::\]:8080 default_server;/' /etc/nginx/sites-available/default
 
 chown -R nginx:nginx /var/log/nginx
 chown -R nginx:nginx /var/lib/nginx
