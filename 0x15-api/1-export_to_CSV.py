@@ -8,12 +8,12 @@ import sys
 if __name__ == "__main__":
     USER_ID = sys.argv[1]
     url = "https://jsonplaceholder.typicode.com/"
-    users = requests.get(url + "users/{}".format(USER_ID)).json()
-    USERNAME  = user.get("USERNAME")
+    user = requests.get(url + "users/{}".format(USER_ID)).json()
+    USERNAME = user.get("USERNAME")
     todos = requests.get(url + "todos", params={"userId": USER_ID}).json()
 
-    with open("USER_Ii.csv".format(USER_ID), "w", newline="") as csvfile:
+    with open("{}.csv".format(USER_ID), "w", newline="") as csvfile:
         writer = csv.writer(csvfile, quoting=csv.QUOTE_ALL)
-        [writer.writerow(
-            [USER_ID, USERNAME, t.get("TASK_COMPLETED_STATUS"), t.get("TASK_TITLE")]
-            ) for t in todos]
+        writer.writerows([
+            [USER_ID, USERNAME, t.get("completed"), t.get("title")]
+            for t in todos])
