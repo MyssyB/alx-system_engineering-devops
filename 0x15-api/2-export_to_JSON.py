@@ -13,7 +13,7 @@ if __name__ == "__main__":
     user = requests.get(url + "users/{}".format(USER_ID)).json()
     USERNAME = user.get("username")
 
-   i todos = requests.get(url + "todos", params={"userId": USER_ID}).json()
+    todos = requests.get(url + "todos", params={"userId": USER_ID}).json()
     tasks = [{
         "task": task.get('title'),
         "completed": task.get('completed'),
