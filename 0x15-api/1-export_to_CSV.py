@@ -1,10 +1,10 @@
-#!/usr/bin/env bash
+#!/usr/bin/python3
 """Extend python script to export data in the csv format"""
 
 import csv
+import json
 import requests
 import sys
-import json
 
 
 if __name__ == "__main__":
@@ -20,7 +20,9 @@ if __name__ == "__main__":
 
     with open("{}.csv".format(USER_ID), "w", newline="") as csvfile:
         writer = csv.writer(csvfile, quoting=csv.QUOTE_ALL)
-        writer.writerow(["USER_ID", "USERNAME", "TASK_COMPLETED_STATUS", "TASK_TITLE"])
+        #writer.writerow(["USER_ID", "USERNAME",
+         #               "TASK_COMPLETED_STATUS", "TASK_TITLE"])
 
         for task in todos:
-            writer.writerow([USER_ID, USERNAME, task.get("completed"), task.get("title")])
+            writer.writerow([USER_ID, USERNAME, task.get("completed"),
+                            task.get("title")])
