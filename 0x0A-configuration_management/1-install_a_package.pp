@@ -1,12 +1,12 @@
 #This manifest installs a flask package using pip3
 
-$deps = ['python3', 'python3-pip']
-package {$deps:
-ensure => 'installed',
-}
-exec {'install_flask':
-command => '/usr/bin/pip3 install flask==2.1.0',
-}
+#$deps = ['python3', 'python3-pip']
+#package {$deps:
+#ensure => 'installed',
+#}
+#exec {'install_flask':
+#command => '/usr/bin/pip3 install flask==2.1.0',
+#}
 
 #class install_flask{
 #package {'python3-pip':
@@ -21,3 +21,8 @@ command => '/usr/bin/pip3 install flask==2.1.0',
 #}
 
 #include install_flask
+
+package { 'flask':
+ensure   => '2.1.0',
+provider => 'pip3',
+}
