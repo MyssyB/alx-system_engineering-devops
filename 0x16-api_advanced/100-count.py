@@ -9,9 +9,9 @@ def count_words(subreddit, word_list, word_count={}, after=None):
     import requests
 
     sub_info = requests.get("https://www.reddit.com/r/{}/hot.json"
-            .format(subreddit), params={"after": after},
-            headers={"User-Agent": "My-User-Agent"},
-            allow_redirects=False)
+                            .format(subreddit), params={"after": after},
+                            headers={"User-Agent": "My-User-Agent"},
+                            allow_redirects=False)
     if sub_info.status_code != 200:
         return None
 
