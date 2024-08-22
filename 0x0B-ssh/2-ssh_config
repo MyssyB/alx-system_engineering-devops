@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # configuration file 
 
-ssh -i ~/.ssh/school ubuntu@54.197.80.17
+ssh -i ~/.ssh/school ubuntu@3.94.213.44
